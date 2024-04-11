@@ -1,0 +1,84 @@
+accelerate ==0.29.1
+cmake ==3.29.0.1
+datasets
+#datasets==2.13.2
+#datasets>=2.0.0
+deepspeed ==0.14.0
+dj-rest-auth==2.1.5
+doccano
+#doccano ==1.8.4
+#doccano ==1.5.5
+einops ==0.7.0
+evaluate ==0.4.1
+flash_attn ==2.5.7
+fsspec==2023.9.2
+importlib-resources ==6.4.0
+ipdb==0.13.11
+jieba==0.42.1
+Jinja2==3.1.2
+jsonlines ==4.0.0
+huggingface_hub ==0.22.2
+hydra-core==1.0.6
+lit ==18.1.2
+matplotlib==3.4.1
+nltk==3.8
+numexpr ==2.10.0
+numpy==1.21.0
+omegaconf
+#omegaconf>=2.2
+#omegaconf>=2.0.6
+openai>=0.6.4
+opt-einsum==3.3.0
+pandas ==1.5.3
+peft>=0.2.0
+protobuf
+#protobuf==3.20.1
+#protobuf==3.19.6
+pybind11>=2.6.2
+pycountry ==23.12.11
+pyhocon==0.3.60
+pytablewriter ==1.2.0
+pytorch-crf==0.7.2
+rouge-score>=0.0.4
+sacrebleu==1.5.0
+scikit-learn ==1.4.0
+sentencepiece ==0.2.0
+seqeval==1.2.2
+sqlitedict ==2.1.0
+tensorboard==2.4.1
+tensorboardX==2.5.1
+tqdm==4.66.1
+tqdm-multiprocess ==0.0.11
+transformers>=4.36.2
+ujson==5.6.0
+wandb==0.12.7
+zstandard ==0.22.0
+
+git+https://github.com/zjunlp/deepke.git@main#egg=deepke
+git+https://github.com/jquesnelle/scaled-rope.git@master#egg=scaled-rope
+git+https://github.com/EleutherAI/lm-evaluation-harness.git@main
+
+# lm-evaluation-harness (Anthropic)
+#anthropic ==0.2.8
+
+# lm-evaluation-harness (AutoGPTQ)
+#git+https://github.com/PanQiWei/AutoGPTQ.git@main#egg=auto-gptq[triton]
+
+# lm-evaluation-harness (Deepsparse)
+#deepsparse-nightly[llm] ==1.8.0.20240404
+
+# lm-evaluation-harness (DEV)
+#black ==24.3.0
+#flake8 ==7.0.0
+#pre-commit ==3.7.0
+#pytest ==8.1.1
+#pytest-cov ==5.0.0
+
+# lm-evaluation-harness (Multilingual)
+#nagisa>=0.2.7
+
+# lm-evaluation-harness (OpenVino)
+#nncf ==2.9.0
+#onnx ==1.16.0
+#openvino ==2024.0.0
+#git+https://github.com/huggingface/optimum-intel.git@main#egg=optimum-intel
