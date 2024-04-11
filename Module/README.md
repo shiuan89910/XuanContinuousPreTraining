@@ -154,6 +154,7 @@ http://127.0.0.1:8000
 
 # Directory Structure
 
+```
 ContinuousPreTraining
 ├── Data
 │   ├── LLM
@@ -189,3 +190,4 @@ ContinuousPreTraining
 │   ├── Yarn_eval_128k.sh                            # 大型語言模型連續預訓練模型 perplexity 評估命令
 │   ├── Yarn_eval-harness_128k.sh                    # 大型語言模型連續預訓練模型 harness 評估命令
 ├── requirements.txt                                 # 專案依賴的 Python 套件列表
+```
