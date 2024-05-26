@@ -48,7 +48,8 @@ ContinuousPreTraining
 ## Install WSL in Windows by Terminal
 > [Link](https://learn.microsoft.com/zh-tw/windows/wsl/install)
 
-> ``` CMD
+> Terminal
+> ```
 > # Open the Terminal
 > wsl --install
 > # Create WSL (Ubuntu) User Name and Password
@@ -58,7 +59,8 @@ ContinuousPreTraining
 ## Install CUDA Toolkit in WSL
 > [Link](https://developer.nvidia.com/cuda-11-8-0-download-archive)
 
-> ``` CMD
+> Terminal
+> ```
 > wget https://developer.download.nvidia.com/compute/cuda/repos/wsl-ubuntu/x86_64/cuda-wsl-ubuntu.pin
 > sudo mv cuda-wsl-ubuntu.pin /etc/apt/preferences.d/cuda-repository-pin-600
 > wget https://developer.download.nvidia.com/compute/cuda/11.8.0/local_installers/cuda-repo-wsl-ubuntu-11-8-local_11.8.0-1_amd64.deb
@@ -70,7 +72,8 @@ ContinuousPreTraining
 
 ## Follow the Steps below in WSL
 
-> ``` CMD
+> Terminal
+> ```
 > cd /usr/local/cuda/bin/
 > pwd
 > # then Copy the Path 
@@ -91,7 +94,8 @@ ContinuousPreTraining
 ## Install Miniconda in WSL
 [Link](https://docs.conda.io/projects/miniconda/en/latest/)
 
-> ``` CMD
+> Terminal
+> ```
 > # Close and new Terminal
 > wsl
 > mkdir -p ~/miniconda3
@@ -102,7 +106,9 @@ ContinuousPreTraining
 > ```
 
 ## Follow the Steps below in WSL
-> ``` CMD
+
+> Terminal
+> ```
 > sudo apt update && audo apt upgrade
 > sudo apt-get install build-essential git g++
 > ```
@@ -113,7 +119,8 @@ ContinuousPreTraining
 > Install Pylance in VSCode "Extensions" (In Windows)
 > Install Python in VSCode "Extensions" (In Windows)
 
-> ``` CMD
+> Terminal
+> ```
 > # Close and new Terminal
 > wsl
 > sudo apt update
@@ -127,7 +134,9 @@ ContinuousPreTraining
 > Install Python in VSCode "Extensions" (In WSL)
 
 # Conda environment
-> ``` Conda Prompt
+
+> Conda Prompt
+> ```
 > conda create -n CPT python=3.10.9 -y
 > conda init
 > conda activate CPT
@@ -138,14 +147,15 @@ ContinuousPreTraining
 > ```
 
 # Doccano
-
-> ``` Shell 1
+> Shell 1
+> ```
 > doccano init
 > doccano createuser --username admin --password pass
 > doccano webserver --port 8000
 > ```
 
-> ``` Shell 2
+> Shell 2
+> ```
 > doccano task
 > http://127.0.0.1:8000
 > ```
