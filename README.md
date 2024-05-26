@@ -1,3 +1,43 @@
+# Directory Structure
+
+```
+ContinuousPreTraining
+├── Data
+│   ├── LLM
+│   ├── NER
+│   │   ├── Dict                                     # 人工標註數據 vocab_dict
+│   │   ├── Untagged                                 # 未標註領域數據
+│   │   ├── Tagged                                   # 弱標註數據
+├── Dataset
+│   ├── LLM                                          # 大型語言模型連續預訓練數據集
+│   ├── NER
+│   │   ├── PreTrain                                 # 語言模型連續預訓練數據集
+│   │   ├── FineTune                                 # 語言模型微調 NER 數據集
+├── Model
+│   ├── LLM                                          # 大型語言模型(連續)預訓練模型
+│   ├── NER                                          # 語言模型連續預訓練、微調 NER 模型
+├── Module
+│   ├── Doccano                                      # NER 數據標註工具
+│   ├── CrossNER                                     # 語言模型連續預訓練庫
+│   ├── DeepKE                                       # 語言模型微調 NER 庫
+│   ├── Yarn                                         # 大型語言模型連續預訓練(提升上下文長度)庫
+│   ├── LmEvaluationHarness                          # 大型語言模型連續預訓練評估庫
+├── Script
+│   ├── CrossNER_train.sh                            # 語言模型連續預訓練命令
+│   ├── DeepKE_prepare_dict.sh                       # 產生 NER 數據 vocab_dict 命令
+│   ├── DeepKE_prepare_data.sh                       # 弱標註 NER 數據命令
+│   ├── DeepKE_run_bert.sh                           # 語言模型微調 NER 命令
+│   ├── DeepKE_predict.sh                            # 語言模型微調 NER 模型結果預測命令
+│   ├── Yarn_tokenization.sh                         # 大型語言模型數據 Tokenized 命令
+│   ├── Yarn_truncate.sh                             # 大型語言模型數據 Truncate 命令
+│   ├── Yarn_train_64k.sh                            # 大型語言模型連續預訓練(上下文長度64k)命令
+│   ├── Yarn_train_128k.sh                           # 大型語言模型連續預訓練(上下文長度128k)命令
+│   ├── Yarn_inference.sh                            # 大型語言模型連續預訓練模型推論命令
+│   ├── Yarn_eval_128k.sh                            # 大型語言模型連續預訓練模型 perplexity 評估命令
+│   ├── Yarn_eval-harness_128k.sh                    # 大型語言模型連續預訓練模型 harness 評估命令
+├── requirements.txt                                 # 專案依賴的 Python 套件列表
+```
+
 # Windows WSL2 environment config
 
 ## Install Nvidia CUDA Driver in Windows
@@ -110,43 +150,3 @@
 > doccano task
 > http://127.0.0.1:8000
 > ```
-
-# Directory Structure
-
-```
-ContinuousPreTraining
-├── Data
-│   ├── LLM
-│   ├── NER
-│   │   ├── Dict                                     # 人工標註數據 vocab_dict
-│   │   ├── Untagged                                 # 未標註領域數據
-│   │   ├── Tagged                                   # 弱標註數據
-├── Dataset
-│   ├── LLM                                          # 大型語言模型連續預訓練數據集
-│   ├── NER
-│   │   ├── PreTrain                                 # 語言模型連續預訓練數據集
-│   │   ├── FineTune                                 # 語言模型微調 NER 數據集
-├── Model
-│   ├── LLM                                          # 大型語言模型(連續)預訓練模型
-│   ├── NER                                          # 語言模型連續預訓練、微調 NER 模型
-├── Module
-│   ├── Doccano                                      # NER 數據標註工具
-│   ├── CrossNER                                     # 語言模型連續預訓練庫
-│   ├── DeepKE                                       # 語言模型微調 NER 庫
-│   ├── Yarn                                         # 大型語言模型連續預訓練(提升上下文長度)庫
-│   ├── LmEvaluationHarness                          # 大型語言模型連續預訓練評估庫
-├── Script
-│   ├── CrossNER_train.sh                            # 語言模型連續預訓練命令
-│   ├── DeepKE_prepare_dict.sh                       # 產生 NER 數據 vocab_dict 命令
-│   ├── DeepKE_prepare_data.sh                       # 弱標註 NER 數據命令
-│   ├── DeepKE_run_bert.sh                           # 語言模型微調 NER 命令
-│   ├── DeepKE_predict.sh                            # 語言模型微調 NER 模型結果預測命令
-│   ├── Yarn_tokenization.sh                         # 大型語言模型數據 Tokenized 命令
-│   ├── Yarn_truncate.sh                             # 大型語言模型數據 Truncate 命令
-│   ├── Yarn_train_64k.sh                            # 大型語言模型連續預訓練(上下文長度64k)命令
-│   ├── Yarn_train_128k.sh                           # 大型語言模型連續預訓練(上下文長度128k)命令
-│   ├── Yarn_inference.sh                            # 大型語言模型連續預訓練模型推論命令
-│   ├── Yarn_eval_128k.sh                            # 大型語言模型連續預訓練模型 perplexity 評估命令
-│   ├── Yarn_eval-harness_128k.sh                    # 大型語言模型連續預訓練模型 harness 評估命令
-├── requirements.txt                                 # 專案依賴的 Python 套件列表
-```
